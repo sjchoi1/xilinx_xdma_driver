@@ -1,0 +1,62 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Apr  1 20:06:25 2021
+# Process ID: 2741
+# Current directory: /home/sjchoi/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/tests
+# Command line: vivado
+# Log file: /home/sjchoi/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/tests/vivado.log
+# Journal file: /home/sjchoi/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/tests/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/sjchoi/project_2/project_2.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [filemgmt 56-316] Unable to set the workflow value for memory map. The only allowable values are simulation or implementation. You specified a value of , this is not allowed.
+WARNING: [filemgmt 56-316] Unable to set the workflow value for memory map. The only allowable values are simulation or implementation. You specified a value of , this is not allowed.
+WARNING: [filemgmt 56-316] Unable to set the workflow value for memory map. The only allowable values are simulation or implementation. You specified a value of , this is not allowed.
+WARNING: [filemgmt 56-316] Unable to set the workflow value for memory map. The only allowable values are simulation or implementation. You specified a value of , this is not allowed.
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 6662.574 ; gain = 263.070 ; free physical = 13200 ; free virtual = 15439
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:06:40
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210308AB02A6
+set_property PROGRAM.FILE {/home/sjchoi/project_2/project_2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcvu9p_0]
+set_property PROBES.FILE {/home/sjchoi/project_2/project_2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xcvu9p_0]
+set_property FULL_PROBES.FILE {/home/sjchoi/project_2/project_2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xcvu9p_0]
+current_hw_device [get_hw_devices xcvu9p_0]
+refresh_hw_device [lindex [get_hw_devices xcvu9p_0] 0]
+INFO: [Labtools 27-2302] Device xcvu9p (JTAG device index = 0) is programmed with a design that has 1 MIG core(s).
+set_property PROBES.FILE {/home/sjchoi/project_2/project_2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xcvu9p_0]
+set_property FULL_PROBES.FILE {/home/sjchoi/project_2/project_2.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xcvu9p_0]
+set_property PROGRAM.FILE {/home/sjchoi/project_2/project_2.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xcvu9p_0]
+program_hw_devices [get_hw_devices xcvu9p_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:47 ; elapsed = 00:00:46 . Memory (MB): peak = 7703.777 ; gain = 0.000 ; free physical = 12007 ; free virtual = 14344
+refresh_hw_device [lindex [get_hw_devices xcvu9p_0] 0]
+WARNING: [Labtools 27-3089] Calibration is still in-progress.
+INFO: [Labtools 27-2302] Device xcvu9p (JTAG device index = 0) is programmed with a design that has 1 MIG core(s).
+INFO: [Labtools 27-3143] Calibration status change detected, refreshing MIG_1
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210308AB02A6
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210308AB02A6
+INFO: [Labtools 27-1434] Device xcvu9p (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
