@@ -176,7 +176,7 @@ static int test_dma(char *devicename, uint32_t addr, uint32_t offset, uint32_t c
     args.pos = addr;
     
     rc = clock_gettime(CLOCK_MONOTONIC, &ts_start);
-    rc = ioctl(fpga_fd, IOCTL_XDMA_MULTIPLE_WRITE, &args);
+    rc = ioctl(fpga_fd, IOCTL_XDMA_MEMORY_ACCESS_DUMP, &args);
     rc = clock_gettime(CLOCK_MONOTONIC, &ts_end);
     timespec_sub(&ts_end, &ts_start);
   

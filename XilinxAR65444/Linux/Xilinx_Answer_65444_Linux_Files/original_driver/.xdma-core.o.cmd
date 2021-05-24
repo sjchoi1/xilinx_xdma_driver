@@ -1,8 +1,21 @@
-cmd_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/driver/xdma-ioctl.o := gcc -Wp,-MD,/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/driver/.xdma-ioctl.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-linux-gnu/5/include  -I./arch/x86/include -I./arch/x86/include/generated  -I./include -I./arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -Iubuntu/include  -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -DCONFIG_X86_X32_ABI -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -DCONFIG_AS_FXSAVEQ=1 -DCONFIG_AS_SSSE3=1 -DCONFIG_AS_CRC32=1 -DCONFIG_AS_AVX=1 -DCONFIG_AS_AVX2=1 -DCONFIG_AS_AVX512=1 -DCONFIG_AS_SHA1_NI=1 -DCONFIG_AS_SHA256_NI=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mindirect-branch=thunk-extern -mindirect-branch-register -fno-jump-tables -fno-delete-null-pointer-checks -O2 --param=allow-store-data-races=0 -DCC_HAVE_ASM_GOTO -Wframe-larger-than=1024 -fstack-protector-strong -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -pg -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wno-pointer-sign -Wno-array-bounds -Wno-maybe-uninitialized -fno-strict-overflow -fno-merge-all-constants -fmerge-constants -fno-stack-check -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -I/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/../include -I/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files//include  -DMODULE  -DKBUILD_BASENAME='"xdma_ioctl"'  -DKBUILD_MODNAME='"xdma"' -c -o /home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/driver/xdma-ioctl.o /home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/driver/xdma-ioctl.c
+cmd_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/original_driver/xdma-core.o := gcc -Wp,-MD,/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/original_driver/.xdma-core.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-linux-gnu/5/include  -I./arch/x86/include -I./arch/x86/include/generated  -I./include -I./arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -Iubuntu/include  -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -DCONFIG_X86_X32_ABI -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -DCONFIG_AS_FXSAVEQ=1 -DCONFIG_AS_SSSE3=1 -DCONFIG_AS_CRC32=1 -DCONFIG_AS_AVX=1 -DCONFIG_AS_AVX2=1 -DCONFIG_AS_AVX512=1 -DCONFIG_AS_SHA1_NI=1 -DCONFIG_AS_SHA256_NI=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mindirect-branch=thunk-extern -mindirect-branch-register -fno-jump-tables -fno-delete-null-pointer-checks -O2 --param=allow-store-data-races=0 -DCC_HAVE_ASM_GOTO -Wframe-larger-than=1024 -fstack-protector-strong -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -pg -mfentry -DCC_USING_FENTRY -Wdeclaration-after-statement -Wno-pointer-sign -Wno-array-bounds -Wno-maybe-uninitialized -fno-strict-overflow -fno-merge-all-constants -fmerge-constants -fno-stack-check -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -Wall -DDEBUG -I/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/../include -I/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files//include -Wno-error=date-time  -DMODULE  -DKBUILD_BASENAME='"xdma_core"'  -DKBUILD_MODNAME='"xdma"' -c -o /home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/original_driver/xdma-core.o /home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/original_driver/xdma-core.c
 
-source_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/driver/xdma-ioctl.o := /home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/driver/xdma-ioctl.c
+source_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/original_driver/xdma-core.o := /home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/original_driver/xdma-core.c
 
-deps_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/driver/xdma-ioctl.o := \
+deps_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/original_driver/xdma-core.o := \
+    $(wildcard include/config/block/id.h) \
+    $(wildcard include/config/wdma/256.h) \
+    $(wildcard include/config/wdma/128.h) \
+    $(wildcard include/config/wdma/64.h) \
+    $(wildcard include/config/wdma/32.h) \
+    $(wildcard include/config/wdma/en.h) \
+    $(wildcard include/config/rdma/256.h) \
+    $(wildcard include/config/rdma/128.h) \
+    $(wildcard include/config/rdma/64.h) \
+    $(wildcard include/config/rdma/32.h) \
+    $(wildcard include/config/rdma/en.h) \
+    $(wildcard include/config/base.h) \
+    $(wildcard include/config/arch/ti816x.h) \
   include/linux/compiler_types.h \
     $(wildcard include/config/have/arch/compiler/h.h) \
     $(wildcard include/config/enable/must/check.h) \
@@ -13,25 +26,10 @@ deps_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Lin
     $(wildcard include/config/retpoline.h) \
     $(wildcard include/config/gcov/kernel.h) \
     $(wildcard include/config/arch/use/builtin/bswap.h) \
-  include/linux/module.h \
-    $(wildcard include/config/modules.h) \
-    $(wildcard include/config/sysfs.h) \
-    $(wildcard include/config/modules/tree/lookup.h) \
-    $(wildcard include/config/livepatch.h) \
-    $(wildcard include/config/unused/symbols.h) \
-    $(wildcard include/config/module/sig.h) \
-    $(wildcard include/config/generic/bug.h) \
-    $(wildcard include/config/kallsyms.h) \
-    $(wildcard include/config/smp.h) \
-    $(wildcard include/config/tracepoints.h) \
-    $(wildcard include/config/tracing.h) \
-    $(wildcard include/config/event/tracing.h) \
-    $(wildcard include/config/ftrace/mcount/record.h) \
-    $(wildcard include/config/module/unload.h) \
-    $(wildcard include/config/constructors.h) \
-    $(wildcard include/config/strict/module/rwx.h) \
-  include/linux/list.h \
-    $(wildcard include/config/debug/list.h) \
+  include/uapi/linux/ioctl.h \
+  arch/x86/include/uapi/asm/ioctl.h \
+  include/asm-generic/ioctl.h \
+  include/uapi/asm-generic/ioctl.h \
   include/linux/types.h \
     $(wildcard include/config/have/uid16.h) \
     $(wildcard include/config/uid16.h) \
@@ -54,6 +52,27 @@ deps_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Lin
     $(wildcard include/config/x86/32.h) \
   arch/x86/include/uapi/asm/posix_types_64.h \
   include/uapi/asm-generic/posix_types.h \
+  /home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files//include/xdma-ioctl.h \
+  /home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files//include/xdma-core.h \
+  include/linux/module.h \
+    $(wildcard include/config/modules.h) \
+    $(wildcard include/config/sysfs.h) \
+    $(wildcard include/config/modules/tree/lookup.h) \
+    $(wildcard include/config/livepatch.h) \
+    $(wildcard include/config/unused/symbols.h) \
+    $(wildcard include/config/module/sig.h) \
+    $(wildcard include/config/generic/bug.h) \
+    $(wildcard include/config/kallsyms.h) \
+    $(wildcard include/config/smp.h) \
+    $(wildcard include/config/tracepoints.h) \
+    $(wildcard include/config/tracing.h) \
+    $(wildcard include/config/event/tracing.h) \
+    $(wildcard include/config/ftrace/mcount/record.h) \
+    $(wildcard include/config/module/unload.h) \
+    $(wildcard include/config/constructors.h) \
+    $(wildcard include/config/strict/module/rwx.h) \
+  include/linux/list.h \
+    $(wildcard include/config/debug/list.h) \
   include/linux/poison.h \
     $(wildcard include/config/illegal/pointer/value.h) \
     $(wildcard include/config/page/poisoning/zero.h) \
@@ -210,10 +229,6 @@ deps_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Lin
   include/uapi/linux/screen_info.h \
   include/linux/apm_bios.h \
   include/uapi/linux/apm_bios.h \
-  include/uapi/linux/ioctl.h \
-  arch/x86/include/uapi/asm/ioctl.h \
-  include/asm-generic/ioctl.h \
-  include/uapi/asm-generic/ioctl.h \
   include/linux/edd.h \
   include/uapi/linux/edd.h \
   arch/x86/include/asm/ist.h \
@@ -847,72 +862,15 @@ deps_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Lin
     $(wildcard include/config/x86/dev/dma/ops.h) \
     $(wildcard include/config/pci/domains.h) \
   include/linux/pm_wakeup.h \
-  include/linux/delay.h \
-  arch/x86/include/asm/delay.h \
-  include/asm-generic/delay.h \
-  include/linux/uaccess.h \
-  arch/x86/include/asm/uaccess.h \
-    $(wildcard include/config/x86/intel/usercopy.h) \
-  arch/x86/include/asm/smap.h \
-    $(wildcard include/config/x86/smap.h) \
-  arch/x86/include/asm/extable.h \
-  arch/x86/include/asm/uaccess_64.h \
-  include/linux/io.h \
-    $(wildcard include/config/have/arch/huge/vmap.h) \
-  include/linux/firmware.h \
-    $(wildcard include/config/fw/loader.h) \
-  include/linux/pci.h \
-    $(wildcard include/config/pci/iov.h) \
-    $(wildcard include/config/pcieaer.h) \
-    $(wildcard include/config/pcieaspm.h) \
-    $(wildcard include/config/pcie/ptm.h) \
-    $(wildcard include/config/pci/ats.h) \
-    $(wildcard include/config/pci/pri.h) \
-    $(wildcard include/config/pci/pasid.h) \
-    $(wildcard include/config/pci/domains/generic.h) \
-    $(wildcard include/config/pci/bus/addr/t/64bit.h) \
-    $(wildcard include/config/pcieportbus.h) \
-    $(wildcard include/config/pcie/ecrc.h) \
-    $(wildcard include/config/pci/quirks.h) \
-    $(wildcard include/config/hibernate/callbacks.h) \
-    $(wildcard include/config/acpi/mcfg.h) \
-    $(wildcard include/config/hotplug/pci.h) \
-    $(wildcard include/config/eeh.h) \
-  include/linux/mod_devicetable.h \
-  include/linux/interrupt.h \
-    $(wildcard include/config/irq/forced/threading.h) \
-    $(wildcard include/config/generic/irq/probe.h) \
-    $(wildcard include/config/irq/timings.h) \
-  include/linux/irqreturn.h \
-  include/linux/irqnr.h \
-  include/uapi/linux/irqnr.h \
-  include/linux/hardirq.h \
-  include/linux/ftrace_irq.h \
-    $(wildcard include/config/ftrace/nmi/enter.h) \
-    $(wildcard include/config/hwlat/tracer.h) \
-  include/linux/vtime.h \
-    $(wildcard include/config/virt/cpu/accounting.h) \
-    $(wildcard include/config/irq/time/accounting.h) \
-  include/linux/context_tracking_state.h \
-    $(wildcard include/config/context/tracking.h) \
-  arch/x86/include/asm/irq.h \
-  arch/x86/include/asm/sections.h \
-  include/asm-generic/sections.h \
-  include/linux/resource_ext.h \
-  include/linux/slab.h \
-    $(wildcard include/config/debug/slab.h) \
-    $(wildcard include/config/failslab.h) \
-    $(wildcard include/config/have/hardened/usercopy/allocator.h) \
-    $(wildcard include/config/slab.h) \
-    $(wildcard include/config/slub.h) \
-  include/linux/kmemleak.h \
-    $(wildcard include/config/debug/kmemleak.h) \
-  include/linux/kasan.h \
-  include/uapi/linux/pci.h \
-  include/uapi/linux/pci_regs.h \
-  include/linux/pci_ids.h \
-  include/linux/pci-dma.h \
-  include/linux/dmapool.h \
+  include/linux/dma-mapping.h \
+    $(wildcard include/config/have/generic/dma/coherent.h) \
+    $(wildcard include/config/has/dma.h) \
+    $(wildcard include/config/arch/has/dma/set/coherent/mask.h) \
+    $(wildcard include/config/need/dma/map/state.h) \
+    $(wildcard include/config/dma/api/debug.h) \
+  include/linux/sizes.h \
+  include/linux/dma-debug.h \
+  include/linux/dma-direction.h \
   include/linux/scatterlist.h \
     $(wildcard include/config/debug/sg.h) \
     $(wildcard include/config/need/sg/dma/length.h) \
@@ -960,6 +918,7 @@ deps_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Lin
   arch/x86/include/asm/pgtable_64.h \
   arch/x86/include/asm/pgtable-invert.h \
   include/asm-generic/pgtable.h \
+    $(wildcard include/config/have/arch/huge/vmap.h) \
     $(wildcard include/config/x86/espfix64.h) \
   include/linux/huge_mm.h \
   include/linux/sched/coredump.h \
@@ -971,23 +930,6 @@ deps_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Lin
   include/linux/vm_event_item.h \
     $(wildcard include/config/memory/balloon.h) \
     $(wildcard include/config/balloon/compaction.h) \
-  arch/x86/include/asm/pci.h \
-    $(wildcard include/config/pci/msi/irq/domain.h) \
-    $(wildcard include/config/vmd.h) \
-  arch/x86/include/asm/pat.h \
-  arch/x86/include/asm/pci_64.h \
-    $(wildcard include/config/calgary/iommu.h) \
-  include/asm-generic/pci.h \
-  include/linux/pci-dma-compat.h \
-  include/linux/dma-mapping.h \
-    $(wildcard include/config/have/generic/dma/coherent.h) \
-    $(wildcard include/config/has/dma.h) \
-    $(wildcard include/config/arch/has/dma/set/coherent/mask.h) \
-    $(wildcard include/config/need/dma/map/state.h) \
-    $(wildcard include/config/dma/api/debug.h) \
-  include/linux/sizes.h \
-  include/linux/dma-debug.h \
-  include/linux/dma-direction.h \
   arch/x86/include/asm/dma-mapping.h \
     $(wildcard include/config/isa.h) \
     $(wildcard include/config/x86/dma/remap.h) \
@@ -995,8 +937,9 @@ deps_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Lin
     $(wildcard include/config/swiotlb.h) \
   include/linux/swiotlb.h \
   include/linux/dma-contiguous.h \
-  /home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files//include/xdma-core.h \
-    $(wildcard include/config/block/id.h) \
+  include/linux/delay.h \
+  arch/x86/include/asm/delay.h \
+  include/asm-generic/delay.h \
   include/linux/fb.h \
     $(wildcard include/config/fb/notify.h) \
     $(wildcard include/config/fb/deferred/io.h) \
@@ -1017,6 +960,7 @@ deps_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Lin
     $(wildcard include/config/i2c/slave.h) \
     $(wildcard include/config/i2c/boardinfo.h) \
     $(wildcard include/config/i2c/mux.h) \
+  include/linux/mod_devicetable.h \
   include/linux/rtmutex.h \
     $(wildcard include/config/debug/rt/mutexes.h) \
   include/linux/irqdomain.h \
@@ -1042,10 +986,77 @@ deps_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Lin
   include/linux/property.h \
   include/uapi/linux/i2c.h \
   include/linux/backlight.h \
+  include/linux/slab.h \
+    $(wildcard include/config/debug/slab.h) \
+    $(wildcard include/config/failslab.h) \
+    $(wildcard include/config/have/hardened/usercopy/allocator.h) \
+    $(wildcard include/config/slab.h) \
+    $(wildcard include/config/slub.h) \
+  include/linux/kmemleak.h \
+    $(wildcard include/config/debug/kmemleak.h) \
+  include/linux/kasan.h \
+  include/linux/interrupt.h \
+    $(wildcard include/config/irq/forced/threading.h) \
+    $(wildcard include/config/generic/irq/probe.h) \
+    $(wildcard include/config/irq/timings.h) \
+  include/linux/irqreturn.h \
+  include/linux/irqnr.h \
+  include/uapi/linux/irqnr.h \
+  include/linux/hardirq.h \
+  include/linux/ftrace_irq.h \
+    $(wildcard include/config/ftrace/nmi/enter.h) \
+    $(wildcard include/config/hwlat/tracer.h) \
+  include/linux/vtime.h \
+    $(wildcard include/config/virt/cpu/accounting.h) \
+    $(wildcard include/config/irq/time/accounting.h) \
+  include/linux/context_tracking_state.h \
+    $(wildcard include/config/context/tracking.h) \
+  arch/x86/include/asm/irq.h \
+  arch/x86/include/asm/sections.h \
+  include/asm-generic/sections.h \
+  arch/x86/include/asm/extable.h \
+  include/linux/io.h \
   include/linux/poll.h \
+  include/linux/uaccess.h \
+  arch/x86/include/asm/uaccess.h \
+    $(wildcard include/config/x86/intel/usercopy.h) \
+  arch/x86/include/asm/smap.h \
+    $(wildcard include/config/x86/smap.h) \
+  arch/x86/include/asm/uaccess_64.h \
   include/uapi/linux/poll.h \
   arch/x86/include/uapi/asm/poll.h \
   include/uapi/asm-generic/poll.h \
+  include/linux/pci.h \
+    $(wildcard include/config/pci/iov.h) \
+    $(wildcard include/config/pcieaer.h) \
+    $(wildcard include/config/pcieaspm.h) \
+    $(wildcard include/config/pcie/ptm.h) \
+    $(wildcard include/config/pci/ats.h) \
+    $(wildcard include/config/pci/pri.h) \
+    $(wildcard include/config/pci/pasid.h) \
+    $(wildcard include/config/pci/domains/generic.h) \
+    $(wildcard include/config/pci/bus/addr/t/64bit.h) \
+    $(wildcard include/config/pcieportbus.h) \
+    $(wildcard include/config/pcie/ecrc.h) \
+    $(wildcard include/config/pci/quirks.h) \
+    $(wildcard include/config/hibernate/callbacks.h) \
+    $(wildcard include/config/acpi/mcfg.h) \
+    $(wildcard include/config/hotplug/pci.h) \
+    $(wildcard include/config/eeh.h) \
+  include/linux/resource_ext.h \
+  include/uapi/linux/pci.h \
+  include/uapi/linux/pci_regs.h \
+  include/linux/pci_ids.h \
+  include/linux/pci-dma.h \
+  include/linux/dmapool.h \
+  arch/x86/include/asm/pci.h \
+    $(wildcard include/config/pci/msi/irq/domain.h) \
+    $(wildcard include/config/vmd.h) \
+  arch/x86/include/asm/pat.h \
+  arch/x86/include/asm/pci_64.h \
+    $(wildcard include/config/calgary/iommu.h) \
+  include/asm-generic/pci.h \
+  include/linux/pci-dma-compat.h \
   include/linux/aio.h \
   include/uapi/linux/aio_abi.h \
   include/linux/splice.h \
@@ -1053,11 +1064,17 @@ deps_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Lin
   include/generated/uapi/linux/version.h \
   include/linux/uio.h \
   include/uapi/linux/uio.h \
+  /home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files//include/xdma-sgm.h \
+  include/linux/pagemap.h \
+  include/linux/highmem.h \
+  arch/x86/include/asm/cacheflush.h \
+  include/asm-generic/cacheflush.h \
+  include/linux/hugetlb_inline.h \
   /home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files//include/xdma-ioctl.h \
   /home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files//include/xbar_sys_parameters.h \
-    $(wildcard include/config/base.h) \
   /home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files//include/perfmon_parameters.h \
+  /home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files//include/version.h \
 
-/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/driver/xdma-ioctl.o: $(deps_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/driver/xdma-ioctl.o)
+/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/original_driver/xdma-core.o: $(deps_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/original_driver/xdma-core.o)
 
-$(deps_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/driver/xdma-ioctl.o):
+$(deps_/home/sjchoi/xilinx_xdma_driver/XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files/original_driver/xdma-core.o):
