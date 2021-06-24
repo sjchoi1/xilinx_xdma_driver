@@ -12,7 +12,7 @@ echo 'building driver and tests'
 cd ../XilinxAR65444/Linux/Xilinx_Answer_65444_Linux_Files
 (cd driver && make)
 
-rmmod xdma
+# rmmod xdma
 
 echo 'Installing kernel driver'
 cp etc/udev/rules.d/* /etc/udev/rules.d/

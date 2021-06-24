@@ -87,9 +87,6 @@ struct xdma_performance_ioctl
 	uint64_t clock_cycle_count;
 	uint64_t data_cycle_count;
 	uint64_t pending_count;
-
-    /* memory access dump */
-    char *memory_access_dump;
 };
 
 // SANGJIN
@@ -99,6 +96,14 @@ struct xdma_multiple_sgdma_ioctl
     uint32_t size_arr[MAX_FILE_SUPPORTED];
     uint32_t pos;
     uint32_t cnt;
+};
+
+// SANGJIN
+struct xdma_memory_access_dump_ioctl
+{
+    uint32_t pos;
+    char *buf;
+    uint32_t size;
 };
 
 /* IOCTL codes */
@@ -120,7 +125,7 @@ struct xdma_multiple_sgdma_ioctl
 
 // SANGJIN
 #define IOCTL_XDMA_MULTIPLE_WRITE _IOW('q', 7, struct xdma_multiple_sgdma_ioctl *)
-#define IOCTL_XDMA_MEMORY_ACCESS_DUMP _IOW('q', 8, struct xdma_performance_ioctl *)
+#define IOCTL_XDMA_MEMORY_ACCESS_DUMP _IOW('q', 8, struct xdma_memory_access_dump_ioctl *)
 
 #endif /* _XDMA_IOCALLS_POSIX_H_ */
 

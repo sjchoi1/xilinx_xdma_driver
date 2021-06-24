@@ -3850,7 +3850,6 @@ static struct xdma_transfer *transfer_multi_create(struct xdma_dev *lro,
 	int rc;
 	struct scatterlist *sgl;
 	struct xdma_transfer *transfer;
-	u32 control;
 
     if (!userspace) {
         printk("only userspace supported\n");
@@ -4031,8 +4030,7 @@ static int ioctl_do_multiple_write(struct file *file, unsigned long arg)
     struct xdma_dev *lro;
     struct xdma_engine *engine;
     struct xdma_multiple_sgdma_ioctl *args = (struct xdma_multiple_sgdma_ioctl *)arg;
-    //loff_t *pos = (loff_t *)&(args->pos); 
-    loff_t pos_val = 0x80000000;
+    loff_t pos_val = (loff_t)args->pos;
     loff_t *pos = &pos_val;
 
     /* fetch device specific data stored earlier during open */
@@ -4088,9 +4086,8 @@ static int ioctl_do_memory_access_dump(struct file *file, unsigned long arg)
     struct xdma_char *lro_char;
     struct xdma_dev *lro;
     struct xdma_engine *engine;
-    struct xdma_multiple_sgdma_ioctl *args = (struct xdma_multiple_sgdma_ioctl *)arg;
-    loff_t *pos = (loff_t *)&(args->pos); 
-    //loff_t pos_val = 0x80000000;
+    struct xdma_memory_access_dump_ioctl *args = (struct xdma_memory_access_dump_ioctl *)arg;
+    loff_t pos_val = (loff_t)args->pos;
     loff_t *pos = &pos_val;
 
     /* fetch device specific data stored earlier during open */
@@ -4103,33 +4100,17 @@ static int ioctl_do_memory_access_dump(struct file *file, unsigned long arg)
 	BUG_ON(lro->magic != MAGIC_DEVICE);
 
 	engine = lro_char->engine;
-	/* XXX detect non-supported directions XXX */
 	BUG_ON(!engine);
 	BUG_ON(engine->magic != MAGIC_ENGINE);
 
-	dbg_tfr("seq:%d file=0x%p, buf=0x%p, count=%lld, pos=%llu\n", seq,
-		file, buf, (s64)count, (u64)*pos);
-
-	dbg_tfr("seq:%d dir_to_dev=%d %s request\n", seq, dir_to_dev,
-		dir_to_dev ? "write" : "read");
-
-	dbg_tfr("%s engine channel %d (engine num %d)= 0x%p\n", engine->name,
-		engine->channel, engine->number_in_channel, engine);
-	dbg_tfr("lro = 0x%p\n", lro);
-
-    for (i = 0; i < args->cnt; i++) {
-        rc = check_transfer_align(engine, args->va_arr[i], 
-                                  (size_t)args->size_arr[i], *pos, 1);
-        if (rc) {
-            dbg_tfr("Invalid transfer alignment detected\n");
-            return rc;
-        }
+    rc = check_transfer_align(engine, args->buf, 
+                              (size_t)args->size, *pos, 1);
+    if (rc) {
+        dbg_tfr("Invalid transfer alignment detected\n");
+        return rc;
     }
 
-	dbg_tfr("res = %ld, remaining = %ld\n", res, count);
-
-	res = transfer_data(engine, (char *)args->va_arr[0], args->size_arr[0], pos, seq);
-	dbg_tfr("seq:%d ioctl_do_memory_access_dump() return=%lld.\n", seq, (s64)res);
+	res = transfer_data(engine, (char *)args->buf, args->size, pos, seq);
 
 	interrupt_status(lro);
 
@@ -4186,6 +4167,7 @@ static long char_sgdma_ioctl(struct file *file, unsigned int cmd,
         rc = ioctl_do_multiple_write(file, arg);
         break;
 
+    // SANGJIN
     case IOCTL_XDMA_MEMORY_ACCESS_DUMP:
         rc = ioctl_do_memory_access_dump(file, arg);
         break;
@@ -6065,7 +6047,6 @@ static struct xdma_char *create_sg_char(struct xdma_dev *lro, int bar,
 
 	fops = select_file_ops(type);
 	if (!fops) {
-		dbg_init("File interface selection failed\n");
 		goto fail_fops;
 	}
 
