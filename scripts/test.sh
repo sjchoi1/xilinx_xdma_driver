@@ -29,7 +29,7 @@ echo ""
 echo ""
 echo "_______________________[TEST 3]______________________________"
 echo "[Info] Testing Memory Access Dump"
-./memory_access_dump -a ${addrStart} -f memory_access_dump.bin
+./memory_access_dump -a 0x100000000 -f memory_access_dump.bin
 echo ""
 echo ""
 echo ""

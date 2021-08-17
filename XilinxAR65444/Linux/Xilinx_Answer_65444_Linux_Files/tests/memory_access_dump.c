@@ -154,7 +154,7 @@ static int test_dma(char *devicename, uint32_t addr, char *filename)
         rc = write(file_fd, buffer, size);
         assert(rc == size);
     } 
-  
+
     //printf("CLOCK_MONOTONIC reports %ld.%09ld seconds (total) for last transfer of %d bytes\n", ts_end.tv_sec, ts_end.tv_nsec, total_size);
 
     if (fpga_fd >= 0)
