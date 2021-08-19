@@ -25,14 +25,3 @@ echo "[Info] Testing Multi Scatter Gather DMA of size 8K * 100"
 myvar=`perl -e "print '-f data/datafile_8K.bin ' x 100;"`
 ./dma_to_device ${myvar} -a ${addrStart}
 
-echo ""
-echo ""
-echo "_______________________[TEST 3]______________________________"
-echo "[Info] Testing Memory Access Dump"
-./memory_access_dump -a 0x100000000 -f memory_access_dump.bin
-echo ""
-echo ""
-echo ""
-echo ""
-
-exit 0
